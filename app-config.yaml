@@ -47,9 +47,11 @@ integrations:
     #   token: ${GHE_TOKEN}
 
 proxy:
-  '/test':
-    target: 'https://example.com'
-    changeOrigin: true
+  '/codefresh/api':
+    target: 'https://g.codefresh.io/api/'
+    allowedMethods: ['GET']
+    headers:
+      Authorization: ${CODEFRESH_TOKEN}
 
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 # Note: After experimenting with basic setup, use CI/CD to generate docs
@@ -61,6 +63,12 @@ techdocs:
     runIn: 'docker' # Alternatives - 'local'
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+
+codefreshPlugin:
+  visibility: public
+  items:
+    project: IT_Team
+    service: OktaSync
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
