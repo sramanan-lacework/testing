@@ -2,6 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: codefresh-plugin-component
+  anotations:
+    codefresh/project-ref: IT_Team
+    codefresh/pipeline-ref: OktaSync
 spec:
   lifecycle: production
   owner: my-team
