@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: codefresh-plugin-component
   anotations:
-    codefresh/project-ref: IT_Admin
-    codefresh/pipeline-ref: OktaSync
+    codefresh/project-ref: Rainbow
+    codefresh/pipeline-ref: reporting-pre-merge
 spec:
   lifecycle: production
   owner: my-team
