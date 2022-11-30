@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: codefresh-plugin-component
-  anotations:
+  annotations:
     codefresh/project-ref: Rainbow
     codefresh/pipeline-ref: reporting-pre-merge
 spec:
